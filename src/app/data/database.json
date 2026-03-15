@@ -1,0 +1,653 @@
+[
+    {
+        "id": "img_1",
+        "filename": "A casual café table photo1.jpg",
+        "url": "/images/A casual café table photo1.jpg",
+        "is_ai": false,
+        "forensic_report": "The subtle shadows cast by the cups and camera on the newspaper, along with the authentic, random grain texture of the wooden table, reveal the image's genuine, physical origin. The natural reflections and logical spatial depth further confirm its authenticity as a real photograph."
+    },
+    {
+        "id": "img_2",
+        "filename": "A casual café table photo2.jpg",
+        "url": "/images/A casual café table photo2.jpg",
+        "is_ai": false,
+        "forensic_report": "The natural light reflection on the wooden surface, the authentic texture of the latte foam, and the logical placement of the cup and saucer on the table all indicate that this is a real photograph."
+    },
+    {
+        "id": "img_3",
+        "filename": "A casual café table photo3.jpg",
+        "url": "/images/A casual café table photo3.jpg",
+        "is_ai": false,
+        "forensic_report": "The candle's warm glow casts a realistic, soft shadow on the table, and the latte's foamy texture and the intricate patterns on the saucer add authentic, tangible details that confirm this is a real photograph."
+    },
+    {
+        "id": "img_4",
+        "filename": "A small wooden cabin in misty mountains1.jpg",
+        "url": "/images/A small wooden cabin in misty mountains1.jpg",
+        "is_ai": false,
+        "forensic_report": "The mist's gradient density, transitioning from thick near the ground to thinner higher up, shows realistic atmospheric perspective. The cabin's weathered wood and mossy roof blend seamlessly with the foggy surroundings, indicating a genuine environment."
+    },
+    {
+        "id": "img_5",
+        "filename": "A small wooden cabin in misty mountains2.jpg",
+        "url": "/images/A small wooden cabin in misty mountains2.jpg",
+        "is_ai": false,
+        "forensic_report": "The mist hugging the mountain slopes and reflecting the early morning light, coupled with the intricate textures of the forest floor and the serene ripples on the lake's surface, unmistakably showcase the authentic, untouched beauty of nature captured in this photograph."
+    },
+    {
+        "id": "img_6",
+        "filename": "A small wooden cabin in misty mountains3.jpg",
+        "url": "/images/A small wooden cabin in misty mountains3.jpg",
+        "is_ai": false,
+        "forensic_report": "The rock's authentic, irregular texture and the way it casts a realistic shadow on the water's surface, along with the correct reflections of the trees and clouds, confirm its genuine nature. The logical spatial depth created by the fog rolling over the hills and the detailed foliage in the foreground further solidifies the photograph's authenticity."
+    },
+    {
+        "id": "img_7",
+        "filename": "ai10.jpg",
+        "url": "/images/ai10.jpg",
+        "is_ai": true,
+        "forensic_report": "The crowd in the background looks like a painting, not real people. Plus, the man's jeans have a strange, almost plastic texture that doesn't look natural."
+    },
+    {
+        "id": "img_8",
+        "filename": "ai11.jpg",
+        "url": "/images/ai11.jpg",
+        "is_ai": true,
+        "forensic_report": "The text on the boxing gloves is distorted and seems to merge with the glove's texture, a common artifact in AI-generated images. The lighting on the man's body is unnaturally bright and highlights his muscles in an exaggerated, almost cartoonish way, which is a telltale sign of a deepfake."
+    },
+    {
+        "id": "img_9",
+        "filename": "ai12.jpg",
+        "url": "/images/ai12.jpg",
+        "is_ai": true,
+        "forensic_report": "The text on the apron is distorted and doesn't align properly, the lighting creates unrealistic shadows, and the textures of the objects seem oddly uniform and artificial."
+    },
+    {
+        "id": "img_10",
+        "filename": "ai13.jpg",
+        "url": "/images/ai13.jpg",
+        "is_ai": true,
+        "forensic_report": "The text on the man's shirt is distorted and uneven, a telltale sign of AI manipulation. The exaggerated expressions and the surreal lighting create an unnatural atmosphere, hinting at a deepfake creation."
+    },
+    {
+        "id": "img_11",
+        "filename": "ai14.jpg",
+        "url": "/images/ai14.jpg",
+        "is_ai": true,
+        "forensic_report": "The stadium's architecture shows distorted textures and mismatched lighting, while the girls' denim jackets have an unnatural sheen, revealing the telltale signs of AI manipulation."
+    },
+    {
+        "id": "img_12",
+        "filename": "ai15.jpg",
+        "url": "/images/ai15.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's fur looks oddly smooth and lacks natural texture, and the food bowl's reflection doesn't align with the lighting in the scene."
+    },
+    {
+        "id": "img_13",
+        "filename": "ai16.jpg",
+        "url": "/images/ai16.jpg",
+        "is_ai": true,
+        "forensic_report": "The text \"FREEF CONI\" on the storefront is distorted and misaligned, hinting at a digital manipulation. The shadows and lighting around the store seem inconsistent, suggesting an artificial creation rather than a real-world scene."
+    },
+    {
+        "id": "img_14",
+        "filename": "ai17.jpg",
+        "url": "/images/ai17.jpg",
+        "is_ai": true,
+        "forensic_report": "The girl's face is too perfect, with flawless skin and exaggerated features. The background is blurry and lacks detail, suggesting it was added later."
+    },
+    {
+        "id": "img_15",
+        "filename": "ai18.jpg",
+        "url": "/images/ai18.jpg",
+        "is_ai": true,
+        "forensic_report": "The lighting on the couple's faces is unnaturally bright, creating an eerie glow. The laptops on the table appear slightly distorted, with edges that seem to blend into the background."
+    },
+    {
+        "id": "img_16",
+        "filename": "ai19.jpg",
+        "url": "/images/ai19.jpg",
+        "is_ai": true,
+        "forensic_report": "The lighting is too perfect, casting unrealistic shadows. The textures of the barn and the woman's skin look oddly smooth and artificial, hinting at a digital creation."
+    },
+    {
+        "id": "img_17",
+        "filename": "ai2.png",
+        "url": "/images/ai2.png",
+        "is_ai": true,
+        "forensic_report": "The cat's body is distorted, blending into the abstract background, which suggests manipulation. The surreal, disjointed background with overlapping, vibrant shapes and colors is typical of AI-generated art, not natural scenes."
+    },
+    {
+        "id": "img_18",
+        "filename": "ai20.jpg",
+        "url": "/images/ai20.jpg",
+        "is_ai": true,
+        "forensic_report": "The flowers on the left have an unnatural glow, and the text on the wall is distorted and hard to read. Plus, the coffee machine in the background looks oddly out of place."
+    },
+    {
+        "id": "img_19",
+        "filename": "ai21.jpg",
+        "url": "/images/ai21.jpg",
+        "is_ai": true,
+        "forensic_report": "The text on the blackboard is distorted and unreadable, a common issue in AI-generated images. The lighting on the woman's face is unnaturally bright, creating an eerie, almost surreal effect that hints at digital manipulation."
+    },
+    {
+        "id": "img_20",
+        "filename": "ai22.jpg",
+        "url": "/images/ai22.jpg",
+        "is_ai": true,
+        "forensic_report": "The gymnast's pose is unnaturally rigid, and her arms seem to merge into the black background in a way that defies physics. The lighting casts an eerie glow, highlighting her form in an almost surreal manner, suggesting a digital manipulation rather than a real-life capture."
+    },
+    {
+        "id": "img_21",
+        "filename": "ai23.jpg",
+        "url": "/images/ai23.jpg",
+        "is_ai": true,
+        "forensic_report": "The fries are too perfect, with no hint of crispiness or oiliness. The burger's sesame seeds look like they've been sprinkled on with a fine-tooth comb, not by hand."
+    },
+    {
+        "id": "img_22",
+        "filename": "ai24.jpg",
+        "url": "/images/ai24.jpg",
+        "is_ai": true,
+        "forensic_report": "The text on the sign is distorted and uneven, a telltale sign of AI-generated content. The reflections on the wet ground are inconsistent, lacking the natural flow you'd expect from real rain."
+    },
+    {
+        "id": "img_23",
+        "filename": "ai25.jpg",
+        "url": "/images/ai25.jpg",
+        "is_ai": true,
+        "forensic_report": "The neon sign's distorted text and the surreal, wind-blown hair suggest AI manipulation. The blending of the fur coat's texture with the dress hints at digital merging."
+    },
+    {
+        "id": "img_24",
+        "filename": "ai26.jpg",
+        "url": "/images/ai26.jpg",
+        "is_ai": true,
+        "forensic_report": "The woman's shorts appear to merge into her skin, creating an unnatural look. The lighting on their bodies is inconsistent, suggesting artificial manipulation."
+    },
+    {
+        "id": "img_25",
+        "filename": "ai27.jpg",
+        "url": "/images/ai27.jpg",
+        "is_ai": true,
+        "forensic_report": "The laptop's screen is blank, yet the keyboard is backlit, which is physically impossible. Plus, the lighting on the bedsheet looks unnaturally perfect, almost too staged."
+    },
+    {
+        "id": "img_26",
+        "filename": "ai28.jpg",
+        "url": "/images/ai28.jpg",
+        "is_ai": true,
+        "forensic_report": "The man's apron looks like it's melting into his shirt, and the coffee machine's buttons are all jumbled up, like someone mixed up the design. Plus, the light is hitting him in a way that makes his face look a bit too shiny and unreal."
+    },
+    {
+        "id": "img_27",
+        "filename": "ai29.jpg",
+        "url": "/images/ai29.jpg",
+        "is_ai": true,
+        "forensic_report": "The barista's curly hair looks oddly perfect, almost too glossy. The coffee machine's metallic sheen is almost too reflective, like it's made of polished chrome rather than everyday steel."
+    },
+    {
+        "id": "img_28",
+        "filename": "ai3.png",
+        "url": "/images/ai3.png",
+        "is_ai": true,
+        "forensic_report": "The dog's body merges with abstract lines, creating a surreal, non-physical form. The skeletal legs and the flowing, wire-like texture suggest a digital manipulation that defies natural anatomy and physics."
+    },
+    {
+        "id": "img_29",
+        "filename": "ai30.jpg",
+        "url": "/images/ai30.jpg",
+        "is_ai": true,
+        "forensic_report": "The exaggerated fur texture on the man's coat looks unnaturally fluffy, almost like a CGI effect gone wild. The woman's hat seems to defy gravity, floating slightly above her head, a telltale sign of digital manipulation."
+    },
+    {
+        "id": "img_30",
+        "filename": "ai31.jpg",
+        "url": "/images/ai31.jpg",
+        "is_ai": true,
+        "forensic_report": "The beekeeper's suit has a strange, almost transparent texture, and the honeycomb looks oddly smooth and uniform, lacking the natural, irregular patterns of real honeycombs. Plus, the lighting seems too perfect, casting an unnatural glow on the scene."
+    },
+    {
+        "id": "img_31",
+        "filename": "ai32.jpg",
+        "url": "/images/ai32.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's fur seems oddly smooth and lacks natural texture. The blanket's pattern appears inconsistent and slightly distorted around the dog's paws."
+    },
+    {
+        "id": "img_32",
+        "filename": "ai33.jpg",
+        "url": "/images/ai33.jpg",
+        "is_ai": true,
+        "forensic_report": "The string lights create a dreamy ambiance, but their uneven glow hints at digital manipulation. The dogs' fur looks almost too perfect, suggesting a touch of AI enhancement."
+    },
+    {
+        "id": "img_33",
+        "filename": "ai34.jpg",
+        "url": "/images/ai34.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's fur appears unnaturally smooth and lacks realistic texture. The lighting creates an ethereal glow around the dog, suggesting digital manipulation rather than natural illumination."
+    },
+    {
+        "id": "img_34",
+        "filename": "ai35.jpg",
+        "url": "/images/ai35.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's ears are unnaturally large, and the blanket's texture appears distorted, suggesting AI manipulation. The lighting casts unrealistic shadows, hinting at a synthetic creation."
+    },
+    {
+        "id": "img_35",
+        "filename": "ai36.jpg",
+        "url": "/images/ai36.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's snout is oddly elongated, and its eyes are too close together. The blanket's texture appears inconsistent, with some areas looking overly smooth."
+    },
+    {
+        "id": "img_36",
+        "filename": "ai37.jpg",
+        "url": "/images/ai37.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's fur appears overly smooth and lacks natural texture, suggesting digital manipulation. The lighting casts unnatural shadows, hinting at artificial enhancement rather than organic sunlight."
+    },
+    {
+        "id": "img_37",
+        "filename": "ai38.jpg",
+        "url": "/images/ai38.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's fur appears unnaturally smooth, lacking the typical texture and shading variations seen in real animals. The background's bokeh effect is inconsistent, with some areas appearing overly blurred while others remain sharp, suggesting digital manipulation."
+    },
+    {
+        "id": "img_38",
+        "filename": "ai39.jpg",
+        "url": "/images/ai39.jpg",
+        "is_ai": true,
+        "forensic_report": "The dog's reflection is distorted, and the water's surface appears unnaturally flat and mirror-like, lacking realistic ripples or distortions. The background trees and sky have an unnatural, almost painted quality, with colors that seem too vivid and textures that lack depth."
+    },
+    {
+        "id": "img_39",
+        "filename": "ai4.png",
+        "url": "/images/ai4.png",
+        "is_ai": true,
+        "forensic_report": "The dog's skeletal structure is eerily transparent, revealing its bones in a way that defies natural anatomy. The swirling red and black lines around it create a chaotic, almost supernatural aura, suggesting a digital manipulation rather than a real-life capture."
+    },
+    {
+        "id": "img_40",
+        "filename": "ai40.jpg",
+        "url": "/images/ai40.jpg",
+        "is_ai": true,
+        "forensic_report": "The cat's fur looks oddly smooth and unnatural, and the sunlight creates an unrealistic, almost surreal glow on the buildings. The shadows and highlights don't quite match up, giving the scene an uncanny, artificial feel."
+    },
+    {
+        "id": "img_41",
+        "filename": "ai41.jpg",
+        "url": "/images/ai41.jpg",
+        "is_ai": true,
+        "forensic_report": "The cats' eyes are unnaturally bright, almost glowing, which is a common trait in AI-generated images. The blue paint on the window frame looks uneven and patchy, suggesting a lack of realistic texture blending."
+    },
+    {
+        "id": "img_42",
+        "filename": "ai42.jpg",
+        "url": "/images/ai42.jpg",
+        "is_ai": true,
+        "forensic_report": "The cat's fur seems too perfectly lit, and the blanket's patterns look oddly uniform, like a digital texture. Plus, the plant in the background has an unnatural glow, almost as if it's part of a staged scene."
+    },
+    {
+        "id": "img_43",
+        "filename": "ai5.png",
+        "url": "/images/ai5.png",
+        "is_ai": true,
+        "forensic_report": "The flowers exhibit unnaturally perfect, almost glowing petals, and the man's face shows slight distortions near his ear. The background blurs into an unrealistic haze, lacking the depth and detail of a real city street."
+    },
+    {
+        "id": "img_44",
+        "filename": "ai51.png",
+        "url": "/images/ai51.png",
+        "is_ai": true,
+        "forensic_report": "The neon signs are distorted, the reflections on the wet ground are inconsistent, and the overall lighting seems unnaturally vibrant for a rainy night scene."
+    },
+    {
+        "id": "img_45",
+        "filename": "ai52.png",
+        "url": "/images/ai52.png",
+        "is_ai": true,
+        "forensic_report": "The dog's fur appears overly smooth and lacks natural texture, suggesting digital manipulation. The background shows inconsistent lighting and depth, common in AI-generated images."
+    },
+    {
+        "id": "img_46",
+        "filename": "ai53.png",
+        "url": "/images/ai53.png",
+        "is_ai": true,
+        "forensic_report": "The dog's fur appears unnaturally smooth and lacks the typical texture seen in real dogs. The background is overly blurred, suggesting manipulation to create a sense of motion that seems artificial."
+    },
+    {
+        "id": "img_47",
+        "filename": "ai54.png",
+        "url": "/images/ai54.png",
+        "is_ai": true,
+        "forensic_report": "The croissant's texture is too perfect, and the shadows are inconsistent, suggesting a digital creation. The cup's reflection on the table doesn't match the lighting, revealing its artificial origin."
+    },
+    {
+        "id": "img_48",
+        "filename": "ai55.png",
+        "url": "/images/ai55.png",
+        "is_ai": true,
+        "forensic_report": "The croissant's shadow doesn't align with the light source, and the cup's reflection is oddly placed, suggesting a manipulated scene."
+    },
+    {
+        "id": "img_49",
+        "filename": "ai56.png",
+        "url": "/images/ai56.png",
+        "is_ai": true,
+        "forensic_report": "The croissant's texture is too perfect, and the coffee cup's shadow doesn't align with the light source, revealing its AI origin."
+    },
+    {
+        "id": "img_50",
+        "filename": "ai57.png",
+        "url": "/images/ai57.png",
+        "is_ai": true,
+        "forensic_report": "The cabin's roof seems to merge with the foggy background, creating a surreal effect. The trees in the foreground appear slightly distorted, with unnaturally smooth textures that hint at digital manipulation."
+    },
+    {
+        "id": "img_51",
+        "filename": "ai58.png",
+        "url": "/images/ai58.png",
+        "is_ai": true,
+        "forensic_report": "The cabin's wooden texture seems overly smooth, lacking natural grain. The mist appears uniform and almost surreal, not behaving like real fog interacting with the environment."
+    },
+    {
+        "id": "img_52",
+        "filename": "ai59.png",
+        "url": "/images/ai59.png",
+        "is_ai": true,
+        "forensic_report": "The fog seems to blend unnaturally with the trees, creating a surreal, almost dreamlike atmosphere. The cabin's placement on the hill, surrounded by dense fog, gives the impression of a scene carefully crafted to evoke a sense of mystery and enchantment."
+    },
+    {
+        "id": "img_53",
+        "filename": "ai6.png",
+        "url": "/images/ai6.png",
+        "is_ai": true,
+        "forensic_report": "The drinks are too perfectly blue, the straw is too straight, and the lighting on their faces is too uniform. Plus, the wall behind them looks a bit too smooth and artificial."
+    },
+    {
+        "id": "img_54",
+        "filename": "ai60.png",
+        "url": "/images/ai60.png",
+        "is_ai": true,
+        "forensic_report": "The burger's cheese and lettuce seem to merge unnaturally, and the sesame seeds on the bun are suspiciously uniform, hinting at an AI's struggle with organic textures. Plus, the shadows around the salt grinders don't quite sync up, revealing a subtle yet telltale sign of digital manipulation."
+    },
+    {
+        "id": "img_55",
+        "filename": "ai61.png",
+        "url": "/images/ai61.png",
+        "is_ai": true,
+        "forensic_report": "The burger's cheese appears unnaturally melted, and the sesame seeds on the bun are overly uniform, suggesting a lack of organic randomness typical in real food images. The background elements, like the pepper grinder and fries, seem slightly out of focus, hinting at possible manipulation or compositing."
+    },
+    {
+        "id": "img_56",
+        "filename": "ai62.png",
+        "url": "/images/ai62.png",
+        "is_ai": true,
+        "forensic_report": "The burger's cheese appears unnaturally melted, almost liquid, and the sesame seeds on the bun are perfectly aligned, suggesting a lack of organic randomness typical in real food images. The lighting is too uniform, casting no shadows, which is uncommon in genuine photographs."
+    },
+    {
+        "id": "img_57",
+        "filename": "ai63.png",
+        "url": "/images/ai63.png",
+        "is_ai": true,
+        "forensic_report": "The \"CAFE\" text is distorted, with uneven spacing and a slight curve. The lighting inside the shop is inconsistent, with some areas appearing overly bright and others too dark. The people in the foreground seem to blend into the background, lacking clear definition."
+    },
+    {
+        "id": "img_58",
+        "filename": "ai64.png",
+        "url": "/images/ai64.png",
+        "is_ai": true,
+        "forensic_report": "The text \"CAFE\" appears distorted and uneven, a common artifact in AI-generated images. The reflections in the window glass are inconsistent and unrealistic, suggesting a lack of true 3D modeling."
+    },
+    {
+        "id": "img_59",
+        "filename": "ai65.png",
+        "url": "/images/ai65.png",
+        "is_ai": true,
+        "forensic_report": "The text \"CAFE\" is distorted, and the reflections in the windows are inconsistent. The lighting and shadows don't match the supposed environment, hinting at a digital manipulation."
+    },
+    {
+        "id": "img_60",
+        "filename": "ai7.png",
+        "url": "/images/ai7.png",
+        "is_ai": true,
+        "forensic_report": "The man's face is distorted by weird lighting, and his body seems to merge with the chair. Plus, the background colors are all wrong—like a digital artist went rogue!"
+    },
+    {
+        "id": "img_61",
+        "filename": "ai8.jpg",
+        "url": "/images/ai8.jpg",
+        "is_ai": true,
+        "forensic_report": "The players' jerseys have distorted logos, the lighting casts odd shadows, and the background crowd appears blurred and out of focus, indicating this image is likely AI-generated."
+    },
+    {
+        "id": "img_62",
+        "filename": "ai9.jpg",
+        "url": "/images/ai9.jpg",
+        "is_ai": true,
+        "forensic_report": "The child's face has an unnatural, smooth texture, lacking the typical skin imperfections. The lighting on the boy's face appears inconsistent with the natural environment behind him, suggesting artificial enhancement."
+    },
+    {
+        "id": "img_63",
+        "filename": "ai_1.png",
+        "url": "/images/ai_1.png",
+        "is_ai": true,
+        "forensic_report": "The cat's body is a patchwork of mismatched colors, and its tail seems to defy gravity, floating in an impossible position. The background's geometric shapes and vibrant colors create a surreal, almost dreamlike atmosphere that screams \"AI-generated.\""
+    },
+    {
+        "id": "img_64",
+        "filename": "burger commercial photography1.jpg",
+        "url": "/images/burger commercial photography1.jpg",
+        "is_ai": false,
+        "forensic_report": "The burger's glossy surface reflects the studio lights, and the sesame seeds on the bun are randomly scattered, showing a natural texture. The lettuce and tomato slices have a crisp, fresh appearance, indicating real, tangible ingredients."
+    },
+    {
+        "id": "img_65",
+        "filename": "burger commercial photography2.jpg",
+        "url": "/images/burger commercial photography2.jpg",
+        "is_ai": false,
+        "forensic_report": "The burger's glossy sheen reflects the light, showing a natural, uneven texture. The French fries exhibit authentic, crispy edges and varied golden hues, indicating real, cooked food."
+    },
+    {
+        "id": "img_66",
+        "filename": "cat sitting on window sunlight1.jpg",
+        "url": "/images/cat sitting on window sunlight1.jpg",
+        "is_ai": false,
+        "forensic_report": "The cat's fur shows natural, random textures that mimic real fur, and the sunlight casts realistic shadows and highlights on its body. The window's reflection on the cat's eyes and the slight blur of the background add depth and authenticity to the scene."
+    },
+    {
+        "id": "img_67",
+        "filename": "cat sitting on window sunlight2.jpg",
+        "url": "/images/cat sitting on window sunlight2.jpg",
+        "is_ai": false,
+        "forensic_report": "The cat's fur shows natural, random textures and highlights, and the window's reflection on the couch aligns perfectly with the light source, showcasing authentic physical properties."
+    },
+    {
+        "id": "img_68",
+        "filename": "cat sitting on window sunlight3.jpg",
+        "url": "/images/cat sitting on window sunlight3.jpg",
+        "is_ai": false,
+        "forensic_report": "The cat's fur shows natural texture and light reflection, and the shadows cast by the objects on the fridge align perfectly with the light source, indicating a real-world scene."
+    },
+    {
+        "id": "img_69",
+        "filename": "cat sitting on window sunlight4.jpg",
+        "url": "/images/cat sitting on window sunlight4.jpg",
+        "is_ai": false,
+        "forensic_report": "The sunlight streaming through the window casts realistic shadows on the cat and dog, and the textures of their fur appear naturally random and authentic. The reflections on the window glass align perfectly with the scene's depth, indicating a genuine photograph."
+    },
+    {
+        "id": "img_70",
+        "filename": "dog running grass sunlight1.jpg",
+        "url": "/images/dog running grass sunlight1.jpg",
+        "is_ai": false,
+        "forensic_report": "The dog's fur shows natural light reflections, and the grass has authentic, random textures. The shadows and spatial depth align perfectly, proving it's a real photograph."
+    },
+    {
+        "id": "img_71",
+        "filename": "dog running grass sunlight2.jpg",
+        "url": "/images/dog running grass sunlight2.jpg",
+        "is_ai": false,
+        "forensic_report": "The dog's fur shows natural light reflections and subtle textures, and the grass has authentic, random variations in color and height, indicating a real, physical environment. The spatial depth is logical, with the dog appearing to cast a shadow and interact with the terrain."
+    },
+    {
+        "id": "img_72",
+        "filename": "dog running grass sunlight3.jpg",
+        "url": "/images/dog running grass sunlight3.jpg",
+        "is_ai": false,
+        "forensic_report": "The soft, natural light creates realistic shadows on the dog's fur and the grass, showing depth. The tall grass gently sways, and the dog's fur has a natural texture, proving it's a real photo."
+    },
+    {
+        "id": "img_73",
+        "filename": "handwritten notebook1.jpg",
+        "url": "/images/handwritten notebook1.jpg",
+        "is_ai": false,
+        "forensic_report": "The coffee stain's irregular edges and the way it soaks into the paper show natural absorption. The notebook's spiral binding casts a subtle shadow, revealing its three-dimensional form."
+    },
+    {
+        "id": "img_74",
+        "filename": "handwritten notebook2.jpg",
+        "url": "/images/handwritten notebook2.jpg",
+        "is_ai": false,
+        "forensic_report": "The soft, natural shadows cast by the notebook and cup, along with the authentic texture of the wooden table, reveal intricate details that only a real photograph can capture. The subtle reflections on the glossy surface of the notebook and the slight imperfections in the paper's edges further confirm its authenticity."
+    },
+    {
+        "id": "img_75",
+        "filename": "handwritten notebook3.jpg",
+        "url": "/images/handwritten notebook3.jpg",
+        "is_ai": false,
+        "forensic_report": "The coffee's surface mirrors the saucer's intricate golden patterns, and the leather journal's texture shows natural wear and stitching, both signs of authentic, tangible objects."
+    },
+    {
+        "id": "img_76",
+        "filename": "handwritten notebook4.jpg",
+        "url": "/images/handwritten notebook4.jpg",
+        "is_ai": false,
+        "forensic_report": "The cup's reflection on the saucer shows accurate light refraction, and the slight unevenness in the blanket's texture adds a touch of realism. Plus, the spatial arrangement of items, like the pen resting naturally on the notebook, suggests a genuine, unposed scene."
+    },
+    {
+        "id": "img_77",
+        "filename": "italian pasta close-up.jpg",
+        "url": "/images/italian pasta close-up.jpg",
+        "is_ai": false,
+        "forensic_report": "The fork's shiny surface reflects the light, creating a realistic sheen. The pasta strands show authentic, random textures and shadows, indicating true depth and volume."
+    },
+    {
+        "id": "img_78",
+        "filename": "italian pasta close-up1.jpg",
+        "url": "/images/italian pasta close-up1.jpg",
+        "is_ai": false,
+        "forensic_report": "The wine glass on the left reflects the surrounding environment, showing a natural and consistent reflection. The varying textures of the food, from the glossy pasta to the rough surface of the mushrooms, along with the logical arrangement of items on the table, indicate a genuine, unaltered photograph."
+    },
+    {
+        "id": "img_79",
+        "filename": "italian pasta close-up2.jpg",
+        "url": "/images/italian pasta close-up2.jpg",
+        "is_ai": false,
+        "forensic_report": "The sunlight casts realistic shadows on the table, and the texture of the cheese looks authentically gritty under the grater. The depth of field is natural, with the chef's hands in sharp focus while the background blurs slightly, adding to the photo's authenticity."
+    },
+    {
+        "id": "img_80",
+        "filename": "italian pasta close-up3.jpg",
+        "url": "/images/italian pasta close-up3.jpg",
+        "is_ai": false,
+        "forensic_report": "The authentic reflections on the glossy surfaces of the bowls, combined with the random, natural textures of the food, confirm this is a genuine photograph. The logical spatial depth, where objects closer to the camera appear larger and more detailed than those further away, adds to its realism."
+    },
+    {
+        "id": "img_81",
+        "filename": "neon street night photograph1y.jpg",
+        "url": "/images/neon street night photograph1y.jpg",
+        "is_ai": false,
+        "forensic_report": "The neon sign's glow reflects naturally on the surface, and the American flags hanging below add a layer of depth and authenticity to the scene. The slight imperfections and random textures on the wall further enhance the realism of the photograph."
+    },
+    {
+        "id": "img_82",
+        "filename": "neon street night photography2.jpg",
+        "url": "/images/neon street night photography2.jpg",
+        "is_ai": false,
+        "forensic_report": "The wet street glistens with realistic reflections of the streetlights, and the varied textures of the buildings and pavements show authentic, random details that only a real photograph captures. The spatial depth, with cars parked along the curb and the street stretching into the distance, adds to the convincing realism of the scene."
+    },
+    {
+        "id": "img_83",
+        "filename": "neon street night photography3.jpg",
+        "url": "/images/neon street night photography3.jpg",
+        "is_ai": false,
+        "forensic_report": "The wet street reflects the neon lights with perfect clarity and distortion, indicating real-world light interaction. The varied textures of the shop signs and awnings show authentic material properties, not digital perfection."
+    },
+    {
+        "id": "img_84",
+        "filename": "vintage camera on desk1.jpg",
+        "url": "/images/vintage camera on desk1.jpg",
+        "is_ai": false,
+        "forensic_report": "The coffee cup's reflection in the camera lens shows a natural, unedited curve, and the slight blur on the edges of the papers adds an authentic, tactile feel to the scene."
+    },
+    {
+        "id": "img_85",
+        "filename": "vintage camera on desk2.jpg",
+        "url": "/images/vintage camera on desk2.jpg",
+        "is_ai": false,
+        "forensic_report": "The camera's lens shows realistic reflections and light refraction, and the notebook's paper texture and handwriting appear naturally aged and worn, indicating authentic, physical materials."
+    },
+    {
+        "id": "img_86",
+        "filename": "vintage camera on desk3.jpg",
+        "url": "/images/vintage camera on desk3.jpg",
+        "is_ai": false,
+        "forensic_report": "The camera's flash casts a realistic, diffused light on the nearby objects, and the keyboard's keys show authentic wear and tear, with slight discoloration and dust accumulation, indicating regular use and age."
+    },
+    {
+        "id": "img_87",
+        "filename": "vintage camera on desk4.jpg",
+        "url": "/images/vintage camera on desk4.jpg",
+        "is_ai": false,
+        "forensic_report": "The drink's surface mirrors the camera and window, showing accurate reflections. The varied textures of the objects and the natural shadows cast on the table confirm the photo's authenticity."
+    },
+    {
+        "id": "img_88",
+        "filename": "vintage street photography film grain1.jpg",
+        "url": "/images/vintage street photography film grain1.jpg",
+        "is_ai": false,
+        "forensic_report": "The bird's natural pose on the curved metal bar, the authentic grain texture of the wooden table, and the logical spatial depth created by the perspective of the buildings and people walking in the background all contribute to the photograph's realism."
+    },
+    {
+        "id": "img_89",
+        "filename": "vintage street photography film grain2.jpg",
+        "url": "/images/vintage street photography film grain2.jpg",
+        "is_ai": false,
+        "forensic_report": "The puddle's reflection mirrors the buildings and street perfectly, showing natural distortion and depth. The texture of the wet pavement and the fire hydrant's placement add authentic, random elements that confirm the photograph's reality."
+    },
+    {
+        "id": "img_90",
+        "filename": "vintage street photography film grain3.jpg",
+        "url": "/images/vintage street photography film grain3.jpg",
+        "is_ai": false,
+        "forensic_report": "The clock's hands are perfectly aligned with the streetlights, showing accurate reflections. The texture of the buildings and the subtle shadows cast by the vehicles add depth and authenticity to the scene."
+    },
+    {
+        "id": "img_91",
+        "filename": "vintage street photography film grain4.jpg",
+        "url": "/images/vintage street photography film grain4.jpg",
+        "is_ai": false,
+        "forensic_report": "The intricate play of light and shadow on the pavement, along with the authentic reflections on the shop windows, showcases the natural interplay of light in a real-world setting. The subtle, random textures on the clothing and bags of the pedestrians add a layer of realism that is difficult to replicate in digital fabrications."
+    },
+    {
+        "id": "img_92",
+        "filename": "vintage street photography film grain5.jpg",
+        "url": "/images/vintage street photography film grain5.jpg",
+        "is_ai": false,
+        "forensic_report": "The random arrangement of bottles and the natural reflections on the glass windows show authentic textures and depth. The varied postures and casual interactions of the people further enhance the scene's realism."
+    },
+    {
+        "id": "img_93",
+        "filename": "vintage street photography film grain6.jpg",
+        "url": "/images/vintage street photography film grain6.jpg",
+        "is_ai": false,
+        "forensic_report": "The natural reflections on the shop's glass and the authentic, random textures of the pavement and tree bark prove this is a real photograph. The logical spatial depth, with people and objects correctly placed in the scene, further confirms its authenticity."
+    }
+]
