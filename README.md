@@ -41,13 +41,7 @@ We are incredibly proud of the **"Aha!" moment** this app generates. When a user
 
 ### 🚀 What's next for Deepfake Detective
 
-* **Global Real-Time Leaderboards:** Implementing AWS DynamoDB to track which countries have the most "eagle-eyed" detectives.
 * **Browser Extension:** A Chrome plugin that automatically runs the Nova Pro forensic check on images in your X (Twitter) or Facebook feed in real-time.
 * **User Uploads:** Allowing players to upload suspicious images they find online and letting Nova Pro instantly verify them.
 
----
-
-### What to do next:
-
-This story hits all the right notes: it’s technical, it’s passionate, and it clearly highlights how you used AWS tools (Nova Canvas & Nova Pro).
 
