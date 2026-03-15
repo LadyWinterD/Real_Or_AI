@@ -1,11 +1,3 @@
-This is the perfect time to craft a winning narrative! Hackathon judges don't just judge the code; they judge the **story**. They want to know *why* you built it, *how* you used the tech, and what your "Aha!" moment was.
-
-Here is a highly professional, beautifully formatted, and engaging Project Story written entirely in Markdown, complete with a touch of LaTeX to make your submission look incredibly academic and polished.
-
-You can copy and paste this directly into your Devpost "Project Story" section.
-
----
-
 ### 🕵️‍♂️ Inspiration
 
 We are living in an era where the line between reality and synthetic generation has completely blurred. With the rapid evolution of generative AI, deepfakes and AI-generated hallucinations are flooding social media, news outlets, and our daily feeds.
