@@ -15,10 +15,10 @@ export default function ShareModal({ onClose, score, totalPlayed, accuracy }: Sh
   // ✅ 从真实的 database 里随机挑一张图作为挑战封面
   const randomImage = database[Math.floor(Math.random() * database.length)];
   
-  const websiteUrl = "https://deepfake-detective.ai";
+  const websiteUrl = "https://main.d70hoadpw7x8k.amplifyapp.com/";
   
   // Create challenge text
-  const challengeText = `🕵️ I just scored ${score}/${totalPlayed} (${accuracy}%) on Deepfake Detective!\n\nCan you tell if this image is AI or Real?\n\nTest your skills: ${websiteUrl}\n\n#DeepfakeDetective #AIDetection`;
+  const challengeText = `🕵️ I just scored ${score}/${totalPlayed} (${accuracy}%) on AI Detective!\n\nCan you tell if this image is AI or Real?\n\nTest your skills: ${websiteUrl}\n\n#RealorAI #AIDetection`;
 
   // Share to different platforms
   const shareToTwitter = () => {
