@@ -109,7 +109,7 @@ export default function Leaderboard() {
                 🏆 Top Detectives
               </h2>
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden">
-                {/* Table Header (Exactly 12 columns) */}
+                {/* Table Header */}
                 <div className="grid grid-cols-12 gap-4 p-4 bg-white/5 border-b border-white/10 text-sm text-gray-400 uppercase tracking-wider">
                   <div className="col-span-1">Rank</div>
                   <div className="col-span-4">Detective</div>
@@ -119,11 +119,17 @@ export default function Leaderboard() {
                   <div className="col-span-2 text-center">Accuracy</div>
                 </div>
 
-                {/* Table Rows (✅ 修复版：精准删除了重复渲染的列，总计恰好12列) */}
+                {/* Table Rows */}
                 <div className="divide-y divide-white/5">
                   {topPlayers.map((player, index) => {
                     const isCurrentUser = user && player.username === user.username && player.country === user.country;
                     const actualRank = filter === "all" ? index + 1 : leaderboard.findIndex(p => p === player) + 1;
+                    
+                    // ✅ 核心魔法：用准确率强行推算出 3 题赛制下的得分！
+                    const normalizedScore = Math.round((player.accuracy / 100) * 3);
+                    // ✅ 连击数封顶为 3
+                    const rawStreak = player.streak !== undefined ? player.streak : normalizedScore;
+                    const normalizedStreak = Math.min(rawStreak, 3);
 
                     return (
                       <div
@@ -132,7 +138,7 @@ export default function Leaderboard() {
                           isCurrentUser ? "bg-cyan-500/10 border-l-4 border-l-cyan-400" : ""
                         }`}
                       >
-                        {/* Rank (1 col) */}
+                        {/* Rank */}
                         <div className="col-span-1 flex items-center">
                           {actualRank === 1 && <span className="text-2xl">🥇</span>}
                           {actualRank === 2 && <span className="text-2xl">🥈</span>}
@@ -142,7 +148,7 @@ export default function Leaderboard() {
                           )}
                         </div>
 
-                        {/* Username (4 cols) */}
+                        {/* Username */}
                         <div className="col-span-4 flex items-center">
                           <span
                             className={`font-semibold ${
@@ -154,24 +160,26 @@ export default function Leaderboard() {
                           </span>
                         </div>
 
-                        {/* Country (2 cols) */}
+                        {/* Country */}
                         <div className="col-span-2 flex items-center justify-center text-2xl">
                           {countryFlags[player.country] || "🌍"}
                         </div>
 
-                        {/* Score (2 cols) */}
+                        {/* ✅ Score: 永远只会显示 3/3, 2/3, 1/3, 0/3 */}
                         <div className="col-span-2 flex items-center justify-center">
-                          <span className="font-bold text-cyan-400">{player.score}/3</span>
-                        </div>
-
-                        {/* Streak (1 col) - 霸道保底版 🔥 */}
-                        <div className="col-span-1 flex items-center justify-center">
-                          <span className="font-bold text-orange-400">
-                            🔥 {player.streak !== undefined ? player.streak : player.score}
+                          <span className="font-bold text-cyan-400">
+                            {normalizedScore}/3
                           </span>
                         </div>
 
-                        {/* Accuracy (2 cols) */}
+                        {/* ✅ Streak: 永远不会超过 🔥 3 */}
+                        <div className="col-span-1 flex items-center justify-center">
+                          <span className="font-bold text-orange-400">
+                            🔥 {normalizedStreak}
+                          </span>
+                        </div>
+
+                        {/* Accuracy */}
                         <div className="col-span-2 flex items-center justify-center">
                           <span
                             className={`font-bold ${
@@ -192,7 +200,7 @@ export default function Leaderboard() {
               </div>
             </div>
 
-            {/* Country Stats (右侧不变) */}
+            {/* Country Stats */}
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-purple-400 uppercase tracking-wider">
                 🌍 Top Countries
