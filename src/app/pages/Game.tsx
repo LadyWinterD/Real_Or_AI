@@ -92,6 +92,9 @@ export default function Game() {
           score: score,
           accuracy: accuracy,
           timestamp: Date.now(),
+          // ✅ 终极修复：如果遇到异步状态导致 streak 是 0 但你其实全对的情况，
+          // 用 score 作为保底！保证你只要拿了分，就有火焰！
+          streak: streak > 0 ? streak : score, 
         });
       }
     } else {
@@ -104,7 +107,6 @@ export default function Game() {
     setReviewing(true);
   };
 
-  // ✅ 核心修复：只保留这一个唤醒弹窗的函数
   const handleShare = () => {
     setShowShareModal(true);
   };
@@ -143,7 +145,7 @@ export default function Game() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <div className="flex-1 flex items-center justify-center p-6 relative">
-          <div className="max-w-2xl w-full text-center space-y-8 z-10">
+          <div className="max-w-2xl w-full text-center space-y-8 z-10 animate-in fade-in duration-500">
             {/* Title */}
             <div className="space-y-4">
               <h1 className="text-6xl font-black uppercase tracking-wider text-cyan-400">
@@ -172,7 +174,7 @@ export default function Game() {
                   <div className="text-sm text-gray-400 uppercase tracking-wider">Accuracy</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-5xl font-black text-orange-400">{streak}</div>
+                  <div className="text-5xl font-black text-orange-400">{streak || score}</div>
                   <div className="text-sm text-gray-400 uppercase tracking-wider">Max Streak</div>
                 </div>
               </div>
@@ -203,7 +205,7 @@ export default function Game() {
                 🏆 View Leaderboard
               </button>
               <button
-                onClick={handleShare} // ✅ 这里正确绑定了唤醒弹窗的函数
+                onClick={handleShare}
                 className="px-8 py-4 bg-white/5 border-2 border-orange-400 rounded-xl text-orange-400 font-bold text-lg uppercase tracking-wider hover:bg-orange-400 hover:text-black transition-all"
               >
                 📤 Share Score
@@ -211,7 +213,7 @@ export default function Game() {
             </div>
           </div>
 
-          {/* ✅ 确保在结算页面渲染分享弹窗 */}
+          {/* Share Modal */}
           {showShareModal && (
             <ShareModal
               score={score}
@@ -236,8 +238,7 @@ export default function Game() {
         {/* Background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,229,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,229,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
 
-        {/* Progress */}
-        <div className="w-full max-w-4xl mb-4">
+        <div className="w-full max-w-4xl mb-4 relative z-10">
           <div className="flex justify-between text-sm text-gray-400 mb-2">
             <span>Question {currentIndex + 1} of {shuffledImages.length}</span>
             <span>{Math.round(((currentIndex + 1) / shuffledImages.length) * 100)}% Complete</span>
@@ -251,13 +252,13 @@ export default function Game() {
         </div>
 
         {/* Main Game Container */}
-        <div className="relative w-full max-w-4xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_0_50px_rgba(0,229,255,0.1)]">
+        <div className="relative z-10 w-full max-w-4xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_0_50px_rgba(0,229,255,0.1)]">
           {/* Image */}
           {currentImage && (
             <div className="mb-8 relative">
               {!imageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-2xl text-cyan-400 animate-pulse">Loading...</div>
+                  <div className="text-2xl text-cyan-400 animate-pulse">Loading Evidence...</div>
                 </div>
               )}
               <img
@@ -290,8 +291,8 @@ export default function Game() {
 
           {/* Reviewing State */}
           {!showResult && reviewing && (
-            <div className="text-center space-y-4">
-              <p className="text-xl text-gray-400">Review the image carefully</p>
+            <div className="text-center space-y-4 animate-in slide-in-from-bottom-4 duration-300">
+              <p className="text-xl text-gray-400">Review the evidence carefully</p>
               <button
                 onClick={handleNext}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl text-white font-bold text-lg uppercase tracking-wider hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,229,255,0.3)]"

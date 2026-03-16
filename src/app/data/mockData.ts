@@ -11,6 +11,7 @@ export interface Player {
   score: number;
   accuracy: number;
   timestamp: number;
+  streak?: number; // ✅ 完美支持连续猜对的火焰特效
 }
 
 // Mock game images - mix of real and AI generated
@@ -77,23 +78,18 @@ export const gameImages: GameImage[] = [
   }
 ];
 
-// Mock global leaderboard with players from different countries
+// ✅ 专为 3 题制 + Streak 打造的排行榜，最高分 2 分，让你随便一玩就能登顶第一！
 export const initialLeaderboard: Player[] = [
-  { username: "ShadowHunter", country: "USA", score: 10, accuracy: 100, timestamp: Date.now() - 3600000 },
-  { username: "TechNinja", country: "Japan", score: 9, accuracy: 90, timestamp: Date.now() - 7200000 },
-  { username: "DataWizard", country: "Germany", score: 9, accuracy: 90, timestamp: Date.now() - 10800000 },
-  { username: "PixelMaster", country: "South Korea", score: 8, accuracy: 80, timestamp: Date.now() - 14400000 },
-  { username: "AIDetective", country: "UK", score: 8, accuracy: 80, timestamp: Date.now() - 18000000 },
-  { username: "ByteKnight", country: "Canada", score: 8, accuracy: 80, timestamp: Date.now() - 21600000 },
-  { username: "CyberSleuth", country: "France", score: 7, accuracy: 70, timestamp: Date.now() - 25200000 },
-  { username: "CodeBreaker", country: "Australia", score: 7, accuracy: 70, timestamp: Date.now() - 28800000 },
-  { username: "LogicMind", country: "Singapore", score: 7, accuracy: 70, timestamp: Date.now() - 32400000 },
-  { username: "TruthSeeker", country: "Netherlands", score: 6, accuracy: 60, timestamp: Date.now() - 36000000 },
-  { username: "ImageSpy", country: "Sweden", score: 6, accuracy: 60, timestamp: Date.now() - 39600000 },
-  { username: "VisualHawk", country: "Brazil", score: 6, accuracy: 60, timestamp: Date.now() - 43200000 },
-  { username: "DeepThinker", country: "India", score: 5, accuracy: 50, timestamp: Date.now() - 46800000 },
-  { username: "SmartEye", country: "China", score: 5, accuracy: 50, timestamp: Date.now() - 50400000 },
-  { username: "PhotoNerd", country: "Spain", score: 5, accuracy: 50, timestamp: Date.now() - 54000000 },
+  { username: "ShadowHunter", country: "USA", score: 2, accuracy: 66, streak: 12, timestamp: Date.now() - 3600000 },
+  { username: "TechNinja", country: "Japan", score: 2, accuracy: 66, streak: 8, timestamp: Date.now() - 7200000 },
+  { username: "DataWizard", country: "Germany", score: 2, accuracy: 66, streak: 5, timestamp: Date.now() - 10800000 },
+  { username: "PixelMaster", country: "South Korea", score: 2, accuracy: 66, streak: 4, timestamp: Date.now() - 14400000 },
+  { username: "AIDetective", country: "UK", score: 1, accuracy: 33, streak: 3, timestamp: Date.now() - 18000000 },
+  { username: "ByteKnight", country: "Canada", score: 1, accuracy: 33, streak: 3, timestamp: Date.now() - 21600000 },
+  { username: "CyberSleuth", country: "France", score: 1, accuracy: 33, streak: 1, timestamp: Date.now() - 25200000 },
+  { username: "CodeBreaker", country: "Australia", score: 1, accuracy: 33, streak: 1, timestamp: Date.now() - 28800000 },
+  { username: "LogicMind", country: "Singapore", score: 1, accuracy: 33, streak: 1, timestamp: Date.now() - 32400000 },
+  { username: "TruthSeeker", country: "Netherlands", score: 1, accuracy: 33, streak: 1, timestamp: Date.now() - 36000000 },
 ];
 
 export const countryFlags: { [key: string]: string } = {

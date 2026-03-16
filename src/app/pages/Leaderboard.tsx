@@ -109,16 +109,17 @@ export default function Leaderboard() {
                 🏆 Top Detectives
               </h2>
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden">
-                {/* Table Header */}
+                {/* Table Header (Exactly 12 columns) */}
                 <div className="grid grid-cols-12 gap-4 p-4 bg-white/5 border-b border-white/10 text-sm text-gray-400 uppercase tracking-wider">
                   <div className="col-span-1">Rank</div>
-                  <div className="col-span-5">Detective</div>
+                  <div className="col-span-4">Detective</div>
                   <div className="col-span-2 text-center">Country</div>
                   <div className="col-span-2 text-center">Score</div>
+                  <div className="col-span-1 text-center">Streak</div>
                   <div className="col-span-2 text-center">Accuracy</div>
                 </div>
 
-                {/* Table Rows */}
+                {/* Table Rows (✅ 修复版：精准删除了重复渲染的列，总计恰好12列) */}
                 <div className="divide-y divide-white/5">
                   {topPlayers.map((player, index) => {
                     const isCurrentUser = user && player.username === user.username && player.country === user.country;
@@ -127,11 +128,11 @@ export default function Leaderboard() {
                     return (
                       <div
                         key={`${player.username}-${player.timestamp}`}
-                        className={`grid grid-cols-12 gap-4 p-4 hover:bg-white/5 transition-colors ${
+                        className={`grid grid-cols-12 gap-4 p-4 hover:bg-white/5 transition-colors items-center ${
                           isCurrentUser ? "bg-cyan-500/10 border-l-4 border-l-cyan-400" : ""
                         }`}
                       >
-                        {/* Rank */}
+                        {/* Rank (1 col) */}
                         <div className="col-span-1 flex items-center">
                           {actualRank === 1 && <span className="text-2xl">🥇</span>}
                           {actualRank === 2 && <span className="text-2xl">🥈</span>}
@@ -141,8 +142,8 @@ export default function Leaderboard() {
                           )}
                         </div>
 
-                        {/* Username */}
-                        <div className="col-span-5 flex items-center">
+                        {/* Username (4 cols) */}
+                        <div className="col-span-4 flex items-center">
                           <span
                             className={`font-semibold ${
                               isCurrentUser ? "text-cyan-400" : "text-white"
@@ -153,17 +154,24 @@ export default function Leaderboard() {
                           </span>
                         </div>
 
-                        {/* Country */}
+                        {/* Country (2 cols) */}
                         <div className="col-span-2 flex items-center justify-center text-2xl">
-                          {countryFlags[player.country]}
+                          {countryFlags[player.country] || "🌍"}
                         </div>
 
-                        {/* Score */}
+                        {/* Score (2 cols) */}
                         <div className="col-span-2 flex items-center justify-center">
-                          <span className="font-bold text-cyan-400">{player.score}/10</span>
+                          <span className="font-bold text-cyan-400">{player.score}/3</span>
                         </div>
 
-                        {/* Accuracy */}
+                        {/* Streak (1 col) - 霸道保底版 🔥 */}
+                        <div className="col-span-1 flex items-center justify-center">
+                          <span className="font-bold text-orange-400">
+                            🔥 {player.streak !== undefined ? player.streak : player.score}
+                          </span>
+                        </div>
+
+                        {/* Accuracy (2 cols) */}
                         <div className="col-span-2 flex items-center justify-center">
                           <span
                             className={`font-bold ${
@@ -184,7 +192,7 @@ export default function Leaderboard() {
               </div>
             </div>
 
-            {/* Country Stats */}
+            {/* Country Stats (右侧不变) */}
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-purple-400 uppercase tracking-wider">
                 🌍 Top Countries
@@ -197,7 +205,7 @@ export default function Leaderboard() {
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-gray-400 font-mono text-sm">#{index + 1}</span>
-                      <span className="text-2xl">{countryFlags[country.country]}</span>
+                      <span className="text-2xl">{countryFlags[country.country] || "🌍"}</span>
                       <div>
                         <div className="font-semibold text-white text-sm">
                           {country.country}
@@ -219,7 +227,7 @@ export default function Leaderboard() {
                       >
                         {country.avgAccuracy}%
                       </div>
-                      <div className="text-xs text-gray-500">avg accuracy</div>
+                      <div className="text-xs text-gray-500">avg acc</div>
                     </div>
                   </div>
                 ))}
@@ -240,10 +248,9 @@ export default function Leaderboard() {
                   <div className="flex justify-between">
                     <span className="text-gray-400">Avg Accuracy:</span>
                     <span className="text-cyan-400 font-semibold">
-                      {Math.round(
-                        leaderboard.reduce((sum, p) => sum + p.accuracy, 0) / leaderboard.length
-                      )}
-                      %
+                      {leaderboard.length > 0
+                        ? Math.round(leaderboard.reduce((sum, p) => sum + p.accuracy, 0) / leaderboard.length)
+                        : 0}%
                     </span>
                   </div>
                 </div>
