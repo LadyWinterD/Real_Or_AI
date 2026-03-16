@@ -62,7 +62,7 @@ export default function Creator() {
               <a href="https://github.com/LadyWinterD" target="_blank" rel="noreferrer" className="flex-1 text-center px-4 py-2.5 bg-white/5 border border-white/20 rounded-xl text-white text-sm font-bold hover:bg-white/10 hover:border-cyan-400 transition-all">
                 GitHub
               </a>
-              <a href="mailto:Cindy.walls.123@gmail.com" className="flex-1 text-center px-4 py-2.5 bg-white/5 border border-white/20 rounded-xl text-white text-sm font-bold hover:bg-white/10 hover:border-cyan-400 transition-all">
+              <a href="mailto:Ladywinterd@gmail.com" className="flex-1 text-center px-4 py-2.5 bg-white/5 border border-white/20 rounded-xl text-white text-sm font-bold hover:bg-white/10 hover:border-cyan-400 transition-all">
                 ✉️ Contact
               </a>
             </div>
