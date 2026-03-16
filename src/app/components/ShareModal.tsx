@@ -1,153 +1,98 @@
 import { useState } from "react";
-import database from '../data/database.json'; // ✅ 换成你真实的弹药库！
 
 interface ShareModalProps {
-  onClose: () => void;
   score: number;
   totalPlayed: number;
   accuracy: number;
+  onClose: () => void;
 }
 
-export default function ShareModal({ onClose, score, totalPlayed, accuracy }: ShareModalProps) {
-  // ✅ 丝滑复制状态
+export default function ShareModal({ score, totalPlayed, accuracy, onClose }: ShareModalProps) {
   const [copied, setCopied] = useState(false);
 
-  // ✅ 从真实的 database 里随机挑一张图作为挑战封面
-  const randomImage = database[Math.floor(Math.random() * database.length)];
-  
-  const websiteUrl = "https://main.d70hoadpw7x8k.amplifyapp.com/";
-  
-  // Create challenge text
-  const challengeText = `🕵️ I just scored ${score}/${totalPlayed} (${accuracy}%) on AI Detective!\n\nCan you tell if this image is AI or Real?\n\nTest your skills: ${websiteUrl}\n\n#RealorAI #AIDetection`;
+  // ⚠️ 把这里的网址换成你真实的 AWS Amplify 上线网址！
+  const GAME_URL = "https://main.d70hoadpw7x8k.amplifyapp.com/"; 
 
-  // Share to different platforms
-  const shareToTwitter = () => {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(challengeText)}`;
+  // 动态生成的极客风战绩文案
+  const shareText = `🕵️ I just scored ${score}/${totalPlayed} (${accuracy}%) on REAL OR AI!\n\nCan you beat my digital forensics skills and spot the deepfakes? 🔍\n\nPowered by Amazon Nova.\nPlay here: ${GAME_URL}\n\n#AmazonNova #Hackathon #RealOrAI`;
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(shareText);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
+
+  const handleTwitterShare = () => {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
     window.open(twitterUrl, '_blank');
   };
 
-  const shareToFacebook = () => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(websiteUrl)}&quote=${encodeURIComponent(challengeText)}`;
-    window.open(facebookUrl, '_blank');
-  };
-
-  const shareToWhatsApp = () => {
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(challengeText)}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
-  // ✅ 优雅的复制反馈，告别丑陋的 alert
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(challengeText);
-    setCopied(true);
-    // 2秒后恢复原状
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
-
   return (
-    <div 
-      className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-6 animate-in fade-in duration-300" 
-      style={{ zIndex: 40 }}
-      onClick={onClose}
-    >
-      <div 
-        className="max-w-2xl w-full space-y-6" 
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Header */}
-        <div className="text-center space-y-2">
-          <h2 className="text-4xl font-black uppercase tracking-wider text-cyan-400">
-            📤 Share Your Challenge
-          </h2>
-          <p className="text-gray-400">
-            Challenge your friends to beat your score!
-          </p>
-        </div>
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md animate-in fade-in duration-200">
+      
+      {/* Modal Container */}
+      <div className="relative w-full max-w-md bg-gray-900 border border-cyan-500/30 rounded-2xl shadow-[0_0_50px_rgba(0,229,255,0.15)] overflow-hidden">
+        
+        {/* Top Decoration */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600"></div>
 
-        {/* Preview Card */}
-        <div className="bg-white/5 backdrop-blur-xl border border-cyan-500/30 rounded-xl p-6 space-y-4">
-          <p className="text-lg text-center text-gray-300 font-semibold">
-            🤔 Can you tell if this image is AI or Real?
-          </p>
+        <div className="p-6 sm:p-8 space-y-6">
           
-          {/* Random Challenge Image (现在是真图了！) */}
-          <div className="relative rounded-lg overflow-hidden">
-            <img 
-              src={randomImage.url} 
-              alt="Challenge" 
-              className="w-full h-64 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center p-4">
-              <p className="text-white font-bold text-xl">🕵️ Real or AI Generated?</p>
+          {/* Header */}
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="text-2xl font-black text-white tracking-wide uppercase">
+                Share Evidence
+              </h3>
+              <p className="text-sm text-gray-400 mt-1">
+                Recruit more detectives to the agency.
+              </p>
             </div>
+            <button 
+              onClick={onClose}
+              className="text-gray-400 hover:text-white transition-colors text-2xl"
+            >
+              ✕
+            </button>
           </div>
 
-          {/* Your Score */}
-          <div className="text-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-lg p-4">
-            <p className="text-sm text-gray-400 mb-1">My Score</p>
-            <p className="text-3xl font-black text-cyan-400">
-              {score}/{totalPlayed} <span className="text-lg text-gray-400">({accuracy}%)</span>
+          {/* Preview Box */}
+          <div className="bg-black/50 border border-white/10 rounded-xl p-4 relative group">
+            <p className="text-gray-300 text-sm whitespace-pre-wrap font-mono leading-relaxed">
+              {shareText}
             </p>
           </div>
 
-          {/* Challenge Text */}
-          <div className="bg-black/30 border border-white/10 rounded-lg p-4">
-            <p className="text-sm text-gray-300 leading-relaxed font-mono whitespace-pre-line">
-              {challengeText}
-            </p>
+          {/* Action Buttons */}
+          <div className="space-y-3">
+            {/* Copy Button */}
+            <button
+              onClick={handleCopy}
+              className={`w-full py-3 px-4 rounded-xl font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 ${
+                copied 
+                  ? "bg-green-500 text-white shadow-[0_0_20px_rgba(34,197,94,0.4)]" 
+                  : "bg-white/5 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_rgba(0,229,255,0.4)]"
+              }`}
+            >
+              {copied ? "✅ Copied to Clipboard!" : "📄 Copy Report"}
+            </button>
+
+            {/* X (Twitter) Button */}
+            <button
+              onClick={handleTwitterShare}
+              className="w-full py-3 px-4 bg-white text-black hover:bg-gray-200 rounded-xl font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="w-5 h-5 fill-current">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.96H5.078z"></path>
+              </svg>
+              Share on X
+            </button>
           </div>
-        </div>
 
-        {/* Share Buttons */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          <button
-            onClick={shareToTwitter}
-            className="px-4 py-3 bg-[#1DA1F2] hover:bg-[#1a8cd8] rounded-xl text-white font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2"
-          >
-            <span className="text-xl">𝕏</span>
-            <span>Twitter/X</span>
-          </button>
-          
-          <button
-            onClick={shareToFacebook}
-            className="px-4 py-3 bg-[#1877F2] hover:bg-[#166fe5] rounded-xl text-white font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2"
-          >
-            <span className="text-xl font-bold">f</span>
-            <span>Facebook</span>
-          </button>
-          
-          <button
-            onClick={shareToWhatsApp}
-            className="px-4 py-3 bg-[#25D366] hover:bg-[#22c55e] rounded-xl text-white font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2"
-          >
-            <span>💬</span>
-            <span>WhatsApp</span>
-          </button>
-          
-          {/* ✅ 丝滑的复制按钮 */}
-          <button
-            onClick={copyToClipboard}
-            className={`px-4 py-3 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 md:col-span-3 ${
-              copied 
-                ? 'bg-green-500 text-white border border-green-400 scale-95' 
-                : 'bg-white/5 border border-white/20 hover:bg-white/10 text-white hover:scale-[1.02]'
-            }`}
-          >
-            <span>{copied ? '✅' : '📋'}</span>
-            <span>{copied ? 'Copied to Clipboard!' : 'Copy to Clipboard'}</span>
-          </button>
-        </div>
-
-        {/* Close Button */}
-        <div className="text-center">
-          <button
-            onClick={onClose}
-            className="px-8 py-3 bg-white/5 border border-white/20 rounded-xl text-gray-400 font-semibold hover:bg-white/10 hover:text-white transition-all"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
