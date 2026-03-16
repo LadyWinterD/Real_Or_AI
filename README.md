@@ -50,7 +50,7 @@ We are incredibly proud of the **"Aha!" moment** this app generates. When a user
 * **User Uploads:** Allowing players to upload suspicious images they find online and letting Nova Pro instantly verify them.
 
 ---
-
+## try it out: https://main.d70hoadpw7x8k.amplifyapp.com/
 ## 👩‍💻 The Investigation Team (Red & Blue)
 
 We are a duo driven by a shared passion for AI, data, and digital security.
